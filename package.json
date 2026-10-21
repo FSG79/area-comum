@@ -1,0 +1,36 @@
+{
+  "name": "area-comum",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "start:prod": "node scripts/start-prod.mjs",
+    "seed": "tsx scripts/seed.ts",
+    "test:rules": "node scripts/test-rules.mjs",
+    "screens": "node scripts/screenshots.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "pnpm@11.28.5",
+  "dependencies": {
+    "better-sqlite3": "^12.4.1",
+    "next": "^15.5.4",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "autoprefixer": "^10.4.21",
+    "playwright-core": "^1.56.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.17",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  }
+}

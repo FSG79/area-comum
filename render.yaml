@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: area-comum
+    runtime: node
+    plan: free
+    region: oregon
+    buildCommand: corepack enable && pnpm install --frozen-lockfile --prod=false && pnpm build
+    startCommand: node scripts/start-prod.mjs
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: COOKIE_SECURE
+        value: "true"
+      - key: NODE_ENV
+        value: production
