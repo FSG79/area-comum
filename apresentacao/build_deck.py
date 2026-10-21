@@ -616,16 +616,24 @@ for index, (number, title, text) in enumerate(steps):
         add_line(slide, x + 0.62, 2.44, 2.28, RGBColor(0x3A, 0x55, 0x4B), height=0.008)
 
 add_rect(slide, 0.65, 4.2, 12.03, 2.2, CARD, radius=0.05)
-add_text(slide, 0.95, 4.38, 6.0, 0.25,
-         [[("ACESSE A DEMONSTRAÇÃO", {"size": 8, "bold": True, "color": GOLD_DARK})]])
-add_text(slide, 0.95, 4.7, 6.1, 0.8,
-         [[("http://127.0.0.1:3000", {"size": 17, "bold": True, "color": INK})],
-          [("Na rede local: http://192.168.15.166:3000", {"size": 8.5, "color": MUTED})]],
+add_text(slide, 0.95, 4.36, 6.0, 0.25,
+         [[("SISTEMA NO AR — ACESSE AGORA", {"size": 8, "bold": True, "color": GOLD_DARK})]])
+add_text(slide, 0.95, 4.63, 3.8, 0.72,
+         [[("area-comum.onrender.com", {"size": 14.5, "bold": True, "color": INK})],
+          [("Link público, gratuito e com HTTPS.", {"size": 8.5, "color": MUTED})]],
          space_after=2)
-add_text(slide, 0.95, 5.58, 6.1, 0.55,
-         [[("Abra no navegador deste computador. Para o cliente acessar de outro dispositivo, "
-            "use o endereço da rede local ou configure um túnel/hospedagem.", {"size": 7.5, "color": MUTED})]],
-         line_spacing=1.2)
+add_text(slide, 0.95, 5.3, 3.85, 0.85,
+         [[("Abra em qualquer computador ou celular, sem instalar nada nem usar a rede do condomínio. "
+            "Na primeira visita após um período sem uso, o servidor gratuito pode levar até 1 minuto para responder.",
+            {"size": 7.3, "color": MUTED})]], line_spacing=1.2)
+add_text(slide, 0.95, 6.08, 3.85, 0.24,
+         [[("Demonstração local: http://127.0.0.1:3000 (neste computador)", {"size": 6.6, "color": MUTED})]])
+
+# QR Code do link público
+if (ASSETS / "qr-acesso.png").exists():
+    slide.shapes.add_picture(str(ASSETS / "qr-acesso.png"), Inches(5.02), Inches(4.6), Inches(1.4), Inches(1.4))
+    add_text(slide, 5.02, 6.06, 1.4, 0.24,
+             [[("Aponte a câmera", {"size": 6.5, "bold": True, "color": GOLD_DARK})]], align=PP_ALIGN.CENTER)
 
 add_line(slide, 7.25, 4.45, 0.012, LINE, height=1.75)
 add_text(slide, 7.55, 4.38, 5.0, 0.25,
@@ -643,10 +651,12 @@ for index, (role, credential) in enumerate(accounts):
              [[(credential, {"size": 8, "color": MUTED})]])
 
 add_text(slide, 0.65, 6.78, 8.0, 0.3,
-         [[("Documentação, testes e capturas de tela estão inclusos no projeto.", {"size": 7.5, "color": RGBColor(0x9F, 0xB3, 0xA8)})]])
+         [[("Sistema publicado, com testes automatizados de regras e capturas do site em produção.", {"size": 7.5, "color": RGBColor(0x9F, 0xB3, 0xA8)})]])
 add_text(slide, 10.5, 6.78, 2.2, 0.3,
          [[("Outubro de 2026", {"size": 7.5, "color": RGBColor(0x9F, 0xB3, 0xA8)})]], align=PP_ALIGN.RIGHT)
 notes(slide, "Encerramento com o caminho de implantação e os acessos de demonstração. "
+             "O sistema já está publicado: area-comum.onrender.com (link público e gratuito, com HTTPS). "
+             "Mostre o QR Code para a assembleia abrir no celular na hora, ou use as contas de teste ao lado. "
              "A aprovação pode acontecer em assembleia e o piloto valida a operação antes do lançamento.")
 
 prs.save(PPTX)
