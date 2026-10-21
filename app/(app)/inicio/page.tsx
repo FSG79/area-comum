@@ -79,7 +79,7 @@ export default async function HomePage() {
       </header>
 
       <div className="grid gap-5 lg:grid-cols-[1.55fr_1fr]">
-        <section className="card-dark relative overflow-hidden p-7 sm:p-8">
+        <section className="card-dark relative min-w-0 overflow-hidden p-7 sm:p-8">
           <div
             aria-hidden
             className="pointer-events-none absolute inset-0"
@@ -147,7 +147,7 @@ export default async function HomePage() {
           </div>
         </section>
 
-        <aside className="card flex flex-col p-6">
+        <aside className="card flex min-w-0 flex-col p-6">
           <div className="flex items-start justify-between">
             <div>
               <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-ink-400">
@@ -218,11 +218,11 @@ export default async function HomePage() {
       </div>
 
       <div className="grid gap-5 lg:grid-cols-[1.55fr_1fr]">
-        <section className="card p-6">
+        <section className="card min-w-0 p-6">
           <MonthCalendar data={calendar} selectedDate={today} basePath="/agenda" showLegend />
         </section>
 
-        <section className="card flex flex-col p-6">
+        <section className="card flex min-w-0 flex-col p-6">
           <div className="flex items-center justify-between">
             <div>
               <p className="eyebrow">No seu calendário</p>

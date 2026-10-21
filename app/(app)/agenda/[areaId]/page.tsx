@@ -127,7 +127,7 @@ export default async function AreaAgendaPage({
       </section>
 
       <div className="grid gap-5 lg:grid-cols-[1.65fr_1fr]">
-        <section className="card p-5 sm:p-6">
+        <section className="card min-w-0 p-5 sm:p-6">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <div>
               <p className="eyebrow">Agenda da área</p>
@@ -255,7 +255,7 @@ export default async function AreaAgendaPage({
           </div>
         </section>
 
-        <div className="space-y-4">
+        <div className="min-w-0 space-y-4">
           <section className="card-dark p-5">
             <p className="flex items-center gap-2 text-[9px] font-bold uppercase tracking-widest2 text-gold-300">
               <span className="flex h-5 w-5 items-center justify-center rounded-full border border-gold-300/30 bg-gold-300/10">
