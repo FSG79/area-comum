@@ -1,8 +1,10 @@
-# Área Comum · Condomínio São Cristóvão
+# Área Comum
 
-Sistema completo de reservas das áreas comuns do condomínio — **salão de festas, churrasqueira,
-quadra e sala de reuniões** — com visual editorial (creme, verde profundo e dourado), o logo
-oficial do condomínio, calendário mensal, pagamentos simulados e central de notificações.
+![Logo do Condomínio Exemplo](public/brand/logo-condominio-exemplo.png)
+
+Projeto de demonstração. O condomínio, os moradores, os apartamentos e todos os dados são fictícios. Serve de exemplo para apresentar a condomínios interessados em soluções desse tipo.
+
+Sistema completo de reservas das áreas comuns do condomínio — **salão de festas, churrasqueira, quadra e sala de reuniões** — para moradores, síndico e portaria, com visual editorial (creme, verde profundo e dourado), calendário mensal, pagamentos simulados e central de notificações.
 
 Stack: **Next.js 15 (App Router) + TypeScript + Tailwind CSS + SQLite (better-sqlite3)**.
 Login próprio com sessão em cookie `httpOnly` e senhas guardadas com **scrypt + salt**.
@@ -14,6 +16,7 @@ Login próprio com sessão em cookie `httpOnly` e senhas guardadas com **scrypt 
 Pré-requisitos: Node.js 20+ e pnpm.
 
 ```bash
+git clone https://github.com/FSG79/area-comum.git
 cd area-comum
 pnpm install        # builds nativos de better-sqlite3/esbuild já liberados em pnpm-workspace.yaml
 pnpm seed           # cria os dados de exemplo
@@ -27,8 +30,7 @@ pnpm build
 pnpm start          # http://localhost:3000
 ```
 
-O banco fica em `data/area-comum.db` (criado automaticamente). Para usar outro caminho, defina
-`DB_PATH`.
+O banco fica em `data/area-comum.db` (criado automaticamente). Para usar outro caminho, defina `DB_PATH` (ver `.env.example`).
 
 ## Hospedagem e link público
 
@@ -46,6 +48,8 @@ gerenciado.
 
 ## Contas de exemplo
 
+Dados fictícios, apenas para demonstração:
+
 | Perfil   | Apartamento | E-mail                   | Senha          |
 | -------- | ----------- | ------------------------ | -------------- |
 | Síndico  | —           | `sindico@areacomum.app`  | `Sindico@123`  |
@@ -58,15 +62,6 @@ gerenciado.
 A tela de login tem atalhos que preenchem as credenciais. Os dados de exemplo incluem reservas
 espalhadas pelo mês, **duas solicitações pendentes de aprovação**, **uma multa em aberto** no
 A-303, duas reservas para hoje na portaria e notificações iniciais para demonstrar a central.
-
-## Apresentação para o condomínio
-
-- [Apresentacao-Area-Comum-Sao-Cristovao.pdf](apresentacao/Apresentacao-Area-Comum-Sao-Cristovao.pdf) — versão final em PDF.
-- [Apresentacao-Area-Comum-Sao-Cristovao.pptx](apresentacao/Apresentacao-Area-Comum-Sao-Cristovao.pptx) — versão editável em PowerPoint.
-
-A apresentação tem 12 páginas, com o diagnóstico, a solução, as telas reais de cada perfil, as
-regras garantidas no servidor, pagamentos, notificações, segurança, benefícios e o caminho de
-implantação. O link de demonstração aparece na última página.
 
 ## Páginas
 
@@ -83,11 +78,9 @@ implantação. O link de demonstração aparece na última página.
 
 ## Visual
 
-- Paleta creme (`#F7F2E8`), verde profundo (`#122F27`) e dourado (`#E0AD43`), inspirada no logo
-  oficial São Cristóvão (amarelo, vermelho e azul).
+- Paleta creme, verde profundo e dourado. O logo é um desenho simples criado para o condomínio fictício de demonstração.
 - Tipografia serifada nos títulos e sans-serif no corpo.
-- Logo oficial tratado e aplicado em versões com fundo transparente, badge e marca d'água
-  (`public/brand/`).
+- Logo aplicado em versões com fundo transparente, badge e marca d'água (`public/brand/`).
 - Cards editoriais, chips de regras, calendário mensal com pontos por área e menus com subtítulos.
 
 ## Regras de negócio (todas validadas no servidor)
@@ -167,7 +160,7 @@ lib/payments.ts         pagamentos e comprovantes
 lib/notifications.ts    notificações
 lib/calendar.ts         calendário mensal e faixa de dias
 lib/usage.ts            painel de uso mensal
-public/brand/           logo oficial tratado (transparente, badge e marca d'água)
+public/brand/           logos do condomínio fictício (transparente, badge e marca d'água)
 scripts/seed.ts         dados de exemplo
 scripts/test-rules.mjs  testes de regras via API
 scripts/screenshots.mjs capturas de tela
@@ -186,3 +179,15 @@ scripts/screenshots.mjs capturas de tela
 - **Bloqueio de manutenção**: bloqueia o dia inteiro da área; se houver reserva ativa no dia, o
   bloqueio é recusado até que as reservas sejam canceladas.
 - **Banco de demonstração**: os dados são fictícios e o `pnpm seed` restaura o estado inicial.
+
+## Próximos passos
+
+- Integração real de pagamento PIX;
+- Notificações por e-mail/WhatsApp;
+- Cadastro de morador com aprovação do síndico;
+- Banco persistente em produção;
+- Refazer a apresentação de demonstração com o logo novo.
+
+## Licença
+
+MIT. Veja o arquivo [LICENSE](LICENSE).
