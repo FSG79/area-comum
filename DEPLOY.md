@@ -2,7 +2,7 @@
 
 Este guia cobre duas formas:
 
-1. **Link temporário agora** — Cloudflare Quick Tunnel, sem conta, ideal para mostrar hoje ao cliente.
+1. **Link temporário agora** — Cloudflare Quick Tunnel, sem conta, ideal para uma demonstração rápida.
 2. **Hospedagem gratuita permanente** — Render, com URL pública estável e deploy automático do GitHub.
 
 ---
@@ -29,13 +29,9 @@ o túnel estiverem ligados.
    & "$env:USERPROFILE\Downloads\cloudflared.exe" tunnel --url http://localhost:3000
    ```
 
-3. O terminal mostra uma URL parecida com:
+3. O terminal mostra uma URL temporária gerada pelo Cloudflare.
 
-   ```text
-   https://algum-nome-aleatorio.trycloudflare.com
-   ```
-
-   Envie **essa URL** para o cliente. Ela abre o sistema completo (login, agenda, calendário,
+   Compartilhe essa URL para mostrar a demonstração. Ela abre o sistema completo (login, agenda, calendário,
    pagamentos simulados, notificações e painel do síndico).
 
 ### Limitações do túnel
@@ -44,16 +40,6 @@ o túnel estiverem ligados.
 - A URL muda cada vez que o túnel é reiniciado.
 - Não tem garantia de disponibilidade (Cloudflare deixa isso explícito).
 - Para uma demonstração, é a opção mais rápida. Para um link estável, use o Render abaixo.
-
-### Link atual deste projeto
-
-Enquanto esta sessão/processo estiver ativo, o link público é:
-
-```text
-https://afford-ict-switches-distributed.trycloudflare.com
-```
-
-> Esse endereço expira quando o túnel for encerrado. Use o Render para um link fixo.
 
 ---
 
@@ -73,12 +59,11 @@ O Render precisa do código em um repositório Git. O jeito mais simples, sem us
 
 1. Crie uma conta em [github.com](https://github.com) (gratuita).
 2. Instale o [GitHub Desktop](https://desktop.github.com/) (gratuito).
-3. No GitHub Desktop: **File → Add local repository** e escolha a pasta
-   `area-comum` (dentro de `Downloads\Deepseek Harness`).
+3. No GitHub Desktop: **File → Add local repository** e escolha a pasta do projeto.
 4. Se ele avisar que não é um repositório, aceite **create a repository**.
 5. Escreva a mensagem de commit (ex.: `Área Comum`) e clique em **Commit to main**.
 6. Clique em **Publish repository**.
-   - Pode deixar **Private** (recomendado) ou **Public**.
+   - Deixe como **Public**.
    - O `.gitignore` já exclui `node_modules`, `.next`, banco local e capturas de tela.
 
 > Alternativa com Git instalado: `git init`, `git add .`, `git commit -m "Área Comum"`, criar o
@@ -112,7 +97,7 @@ O Render precisa do código em um repositório Git. O jeito mais simples, sem us
 1. Abra a URL no celular ou em outro computador.
 2. Faça login com uma conta de demonstração.
 3. Navegue pela visão geral, agenda, calendário, histórico e painel do síndico.
-4. Envie a URL ao cliente.
+4. Compartilhe essa URL para mostrar a demonstração.
 
 ### Se preferir criar o serviço manualmente
 
@@ -168,9 +153,6 @@ novo deploy automático no Render.
 
 | Objetivo | Solução | Link |
 | --- | --- | --- |
-| Mostrar hoje, sem cadastro | Cloudflare Quick Tunnel | `https://...trycloudflare.com` (temporário) |
+| Mostrar hoje, sem cadastro | Cloudflare Quick Tunnel | Link temporário (gerado no terminal) |
 | Link fixo gratuito | Render + GitHub | `https://area-comum.onrender.com` (free) |
 | Dados persistentes | Render com disco pago ou banco gerenciado | requer adaptação/plano |
-
-Se quiser, posso acompanhar o deploy: basta publicar o repositório e me enviar a URL do Render
-para eu validar o login e as telas em produção.
