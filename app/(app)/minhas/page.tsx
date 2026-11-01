@@ -9,7 +9,7 @@ import { listOpenFinesForApartment } from "@/lib/fines";
 import { listUpcomingForApartment } from "@/lib/reservations";
 import { formatCurrencyBR } from "@/lib/time";
 
-export const metadata: Metadata = { title: "Minhas reservas · São Cristóvão" };
+export const metadata: Metadata = { title: "Minhas reservas · Condomínio Exemplo" };
 
 const MONTHS = [
   "jan",

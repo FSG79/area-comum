@@ -1,4 +1,4 @@
-# Relatório de testes — Área Comum · São Cristóvão
+# Relatório de testes — Área Comum · Condomínio Exemplo
 
 Execução em **20/10/2026**, com o build de produção (`pnpm build` + `pnpm start`) rodando em
 `http://127.0.0.1:3000`. O script recria os dados de exemplo entre os grupos e, ao final, restaura o

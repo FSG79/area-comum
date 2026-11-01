@@ -19,7 +19,7 @@ export function AuthShell({ children }: { children: React.ReactNode }) {
               "radial-gradient(700px 420px at 85% 8%, rgba(224,173,67,.18), transparent 62%), radial-gradient(520px 360px at 8% 92%, rgba(109,148,134,.25), transparent 60%)",
           }}
         />
-        {/* Marca d'água oficial do condomínio */}
+        {/* Marca d'água do condomínio */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/brand/emblem-sc.png"
@@ -96,7 +96,7 @@ export function AuthShell({ children }: { children: React.ReactNode }) {
         </div>
 
         <div className="relative flex items-center justify-between border-t border-cream-100/10 pt-5 text-[9px] uppercase tracking-[0.18em] text-cream-100/30">
-          <span>Condomínio São Cristóvão</span>
+          <span>Condomínio Exemplo</span>
           <span>Next.js · SQLite</span>
         </div>
       </section>
@@ -116,7 +116,7 @@ export function AuthShell({ children }: { children: React.ReactNode }) {
           </div>
           {children}
           <p className="mt-8 text-center text-[9px] uppercase tracking-[0.2em] text-ink-300">
-            Condomínio São Cristóvão · Uso exclusivo de moradores
+            Condomínio Exemplo · Uso exclusivo de moradores
           </p>
         </div>
       </section>

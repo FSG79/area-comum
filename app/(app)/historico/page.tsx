@@ -14,7 +14,7 @@ import {
   weekdayBR,
 } from "@/lib/time";
 
-export const metadata: Metadata = { title: "Histórico · São Cristóvão" };
+export const metadata: Metadata = { title: "Histórico · Condomínio Exemplo" };
 
 const MONTHS = [
   "jan",

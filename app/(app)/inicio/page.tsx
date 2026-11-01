@@ -17,7 +17,7 @@ import {
   todayISO,
 } from "@/lib/time";
 
-export const metadata: Metadata = { title: "Visão geral · São Cristóvão" };
+export const metadata: Metadata = { title: "Visão geral · Condomínio Exemplo" };
 
 function longDate(date: string): string {
   const label = new Intl.DateTimeFormat("pt-BR", {
@@ -88,7 +88,7 @@ export default async function HomePage() {
                 "radial-gradient(520px 300px at 95% 0%, rgba(224,173,67,.22), transparent 62%), radial-gradient(420px 260px at 5% 100%, rgba(109,148,134,.22), transparent 60%)",
             }}
           />
-          {/* Marca d'água do logo oficial */}
+          {/* Marca d'água do logo */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/brand/emblem-sc.png"

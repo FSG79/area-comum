@@ -11,7 +11,7 @@ import { getMonthCalendar } from "@/lib/calendar";
 import { listDay, listUpcomingForApartment, type ReservationView } from "@/lib/reservations";
 import { formatDateBR, isValidDate, todayISO, weekdayBR } from "@/lib/time";
 
-export const metadata: Metadata = { title: "Agenda · São Cristóvão" };
+export const metadata: Metadata = { title: "Agenda · Condomínio Exemplo" };
 
 function longDate(date: string): string {
   const label = new Intl.DateTimeFormat("pt-BR", {

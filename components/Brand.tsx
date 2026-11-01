@@ -14,12 +14,12 @@ export function Brand({
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src="/brand/emblem-sc-badge.png"
-        alt="Logo do Condomínio São Cristóvão"
+        alt="Logo do Condomínio Exemplo"
         className="h-11 w-11 rounded-full shadow-soft ring-1 ring-white/10"
       />
       <span className="leading-none">
         <span className={`block font-display text-[1.2rem] font-medium tracking-tight ${title}`}>
-          São Cristóvão
+          Condomínio Exemplo
         </span>
         <span
           className={`mt-1.5 block text-[8px] font-semibold uppercase tracking-[0.24em] ${subtitle}`}

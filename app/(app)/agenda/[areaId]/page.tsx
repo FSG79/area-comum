@@ -11,7 +11,7 @@ import { getAreaStrip } from "@/lib/calendar";
 import { listDay } from "@/lib/reservations";
 import { addDays, formatDateBR, isValidDate, todayISO } from "@/lib/time";
 
-export const metadata: Metadata = { title: "Agenda da área · São Cristóvão" };
+export const metadata: Metadata = { title: "Agenda da área · Condomínio Exemplo" };
 
 function longDate(date: string): string {
   const label = new Intl.DateTimeFormat("pt-BR", {

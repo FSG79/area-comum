@@ -187,7 +187,7 @@ export function AppNav({
           </div>
 
           <p className="px-2 pb-1 text-[9px] leading-relaxed text-cream-100/25">
-            Condomínio São Cristóvão
+            Condomínio Exemplo
             <br />
             Gestão de convivência · demonstração
           </p>

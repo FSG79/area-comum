@@ -5,7 +5,7 @@ import { LoginForm } from "@/components/LoginForm";
 import { AuthShell } from "@/components/AuthShell";
 
 export const metadata: Metadata = {
-  title: "Entrar · São Cristóvão",
+  title: "Entrar · Condomínio Exemplo",
 };
 
 export default async function LoginPage() {
